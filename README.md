@@ -21,3 +21,66 @@ human reflex to having a hand touch a hot
 object would be the immediate removal of the
 hand from the object so as to avoid any
 damage.
+
+Self-driving vehicles have reached new heights
+in recent times but yet are not able to function
+completely on their own. This is because they
+require a lot of computation for detecting
+obstacles that could possibly pop up in the
+vehicles’ path, therefore making the entire
+process of detection and avoidance of an
+obstacle slower. Hence, implementing the
+concept of reflexes in autonomous vehicles
+would be revolutionary, especially in making the
+vehicles ready for situations like collisions, as it would require fewer computations and have a
+faster response time.
+
+The simulation for depicting the concept of
+reflexes was performed using the Robot
+Operating System (ROS). A comparison was
+made between Faster R-CNN and the SSD
+model, both of which are object detection
+models. Faster R-CNN uses a region proposal
+network to create boundary boxes and utilizes
+those boxes to classify objects. The whole
+process runs at around 7 frames per second,
+which is far below what real-time processing
+needs. Hence, this model proved to be inefficient
+in the case of an autonomous vehicle. On the
+other hand, a SSD model was designed for
+object detection in real-time. SSD speeds up the
+process significantly by eliminating the need for
+the region proposal network. To recover the drop
+in accuracy, it applies a few improvements
+including multi-scale features and default boxes.
+These improvements allow it to match the Faster
+R-CNN’s accuracy using lower resolution
+images, which further pushes the speed higher.
+Similar to the aforementioned comparison, the SSD did achieve real-time processing speed
+and even surpassed the accuracy of the Faster
+R-CNN. Hence, a SSD was chosen for the
+implementation of reflexes.
+
+A simulation was performed for which OSRF’s
+Citysim and MCity environment worlds were
+used. The images in these environments were
+used for the creation of the dataset. This dataset
+was then divided into 2 parts: Training and
+Testing. The SSD was then processed using the
+Training group, followed by validation using the
+Testing dataset. Next, the RVIZ setup was done.
+This displayed information about all sensors and
+cameras of the vehicle. Then, a ROS publisher
+was implemented, which took inputs via the
+cameras and sensors. It was inferred that in
+case of an obstacle coming suddenly in the way
+of the vehicle, the obstacle was immediately
+detected, and the vehicle was compelled to apply brakes promptly or change its course with
+minuscule amounts of internal computation as
+shown in Img 1. This ensures immediate
+reaction to sensor and camera data and
+therefore is effective towards the implementation
+of human-like reflexes on an autonomous
+vehicle.
+
+
