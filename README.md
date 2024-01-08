@@ -10,6 +10,14 @@ To implement this, disease and symptoms related datasets were collected and clea
 
 A function was created to take symptoms as inputs and make predictions about the disease identified. According to the output, that is, the predicted health condition, necessary changes required in the vehicle’s driving pattern to ensure passenger’s comfort during the journey were printed. The autonomous vehicle would then take action accordingly based on the output commands with the help of interaction between the vehicle’s AI and actuators.
 
-## Equipping the Autonomous Vehicle with human-like Reflexes
+## Equipping the Autonomous Vehicle with Human-like Reflexes
 
-
+We humans are equipped with an involuntary response system that produces automatic reactions to certain kinds of stimuli. These
+reactions are called reflexes. These actions are
+performed without any prior processing and are
+simply automatic as they occur without
+conscious thought of the mind. For example, a
+human reflex to having a hand touch a hot
+object would be the immediate removal of the
+hand from the object so as to avoid any
+damage.
